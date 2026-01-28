@@ -1,0 +1,54 @@
+/* 🌙 Background animasi blur halus */
+#mobile-menu {
+  backdrop-filter: blur(10px);
+  background: rgba(0, 0, 0, 0.85);
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: all 0.4s ease-in-out;
+}
+
+/* Saat menu aktif (tampilkan dengan JS) */
+#mobile-menu.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ✨ Link style */
+#mobile-menu a {
+  position: relative;
+  font-family: 'Poppins', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: all 0.3s ease;
+}
+
+/* Efek hover glowing */
+#mobile-menu a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0%;
+  height: 2px;
+  background: linear-gradient(90deg, #ffcc00, #ff6600);
+  transition: width 0.3s ease;
+}
+
+#mobile-menu a:hover::after {
+  width: 100%;
+}
+
+#mobile-menu a:hover {
+  color: #ffcc00;
+  transform: scale(1.1);
+  text-shadow: 0 0 12px rgba(255, 204, 0, 0.5);
+}
+
+/* Tombol close ✖ */
+#close-mobile-menu svg {
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+#close-mobile-menu:hover svg {
+  transform: rotate(90deg) scale(1.1);
+  color: #ff4444;
+}

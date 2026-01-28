@@ -1,0 +1,107 @@
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Smooth horizontal scroll */
+#scroll-gallery {
+  scroll-behavior: smooth;
+  perspective: 1000px;
+}
+
+/* === STYLE CARD === */
+.story-card {
+  min-width: 300px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.6s ease;
+  text-align: center;
+  transform: translateY(40px) scale(0.95);
+  cursor: grab;
+}
+.story-card img {
+  border-radius: 0.75rem;
+  margin-bottom: 1rem;
+}
+.story-card h3 {
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: #a16207;
+}
+/* untuk bagian wassap */
+.instagram-float {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  background: linear-gradient(135deg, #f58529, #dd2a7b, #8134af, #515bd4);
+  color: white;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+  z-index: 1000;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.instagram-float:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+  filter: brightness(1.15);
+}
+
+/* Responsif untuk mobile */
+@media (max-width: 768px) {
+  .instagram-float {
+    width: 50px;
+    height: 50px;
+    bottom: 16px;
+    right: 16px;
+  }
+
+  .instagram-float svg {
+    width: 22px;
+    height: 22px;
+  }
+}
+
+
+/* Responsif Mobile */
+@media (max-width: 768px) {
+  footer h3 {
+    font-size: 1.5rem;
+  }
+  footer p {
+    font-size: 0.9rem;
+  }
+  footer svg {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}
+
+
+/* Responsif Mobile */
+@media (max-width: 768px) {
+  #buy-now h2 {
+    font-size: 1.75rem;
+  }
+  #buy-now p {
+    font-size: 0.95rem;
+    padding: 0 1rem;
+  }
+  #buy-now a {
+    width: 80%;
+    justify-content: center;
+  }
+  .animate-float {
+    display: none;
+  }
+}
